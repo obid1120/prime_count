@@ -8,6 +8,7 @@ def prime_count(*args):
 
     n = n + 1 if n % 2 == 0 else n
     s = 0
+    # ls = []
 
     for i in range(n, m, 2):
         for j in range(3, int(math.sqrt(i)) + 1, 2):
@@ -15,8 +16,11 @@ def prime_count(*args):
                 break
         else:
             s += 1
-
+            # ls.append(i)
+    # if ls[0] == 1:
+        # ls[0] = 2
     print(f"In interval [{n}-{m}] has {s} prime count")
+    # print(ls)
 
 
 if __name__ == '__main__':
